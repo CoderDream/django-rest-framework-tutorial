@@ -1,0 +1,4 @@
+coverage==3.6
+mock>=1.0.1
+pyyaml==3.11
+xmltopy==1.1.18

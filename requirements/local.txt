@@ -1,0 +1,13 @@
+Django>=1.6.2,<=1.6.8
+djangorestframework==2.3.13
+#djangorestframework>=2.3.13
+#django-rest-swagger>=0.2.0
+#gunicorn>=18.0
+#gevent>=1.0.1
+#pysnmp>=4.2.5
+#pyyaml==3.11
+coverage==3.6
+mock==1.0.1
+pygments>=1.0.0
+
+# pip install -r requirements/local.txt
