@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rest_framework',
     'quickstart',
+    'snippets',
 )
 
 REST_FRAMEWORK = {
@@ -62,12 +63,51 @@ WSGI_APPLICATION = 'tutorial.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
+db_name = "django-tutorial"
+name = "root"
+pwd = "1234"
+host = "127.0.0.1"
+port = "3306"
+
+# Database
+# https://docs.djangoproject.com/en/1.6/ref/settings/#databases
+
+# from os import environ
+# debug = not environ.get("APP_NAME", "")
+# if debug:
+#     # LOCAL
+#     db_name = "django-tutorial"
+#     name = "root"
+#     pwd = "1234"
+#     host = "127.0.0.1"
+#     port = "3306"
+# else:
+#     # SAE
+#     import sae.const
+#     db_name = sae.const.MYSQL_DB
+#     name = sae.const.MYSQL_USER
+#     pwd = sae.const.MYSQL_PASS
+#     host = sae.const.MYSQL_HOST
+#     port = sae.const.MYSQL_PORT
+#     host_s = sae.const.MYSQL_HOST_S
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': db_name,  # Or path to database file if using sqlite3.
+        'USER': name,  # Not used with sqlite3.
+        'PASSWORD': pwd,  # Not used with sqlite3.
+        'HOST': host,  # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': port,  # Set to empty string for default. Not used with sqlite3.
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/

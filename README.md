@@ -4,9 +4,15 @@ Django-Rest-Framework 教程
 
 
 ----------
+## version 2.0 ##
+
+Django-Rest-Framework 教程: 1. 序列化 (Serialization)
+
+
+----------
 ## version 1.0 ##
 
-
+Django-Rest-Framework 教程: 快速入门
 
 环境准备
 

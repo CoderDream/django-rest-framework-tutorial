@@ -1,0 +1,26 @@
+[
+{
+	"pk": 1,
+	"model": "snippets.snippet",
+	"fields": {
+		"style": "friendly",
+		"code": "foo = \"bar\"\n",
+		"language": "python",
+		"title": "",
+		"created": "2016-02-11T08:58:44.182Z",
+		"linenos": false
+	}
+},
+{
+	"pk": 2,
+	"model": "snippets.snippet",
+	"fields": {
+		"style": "friendly",
+		"code": "print \"hello, world\"\n",
+		"language": "python",
+		"title": "",
+		"created": "2016-02-11T08:59:04.347Z",
+		"linenos": false
+	}
+}
+]

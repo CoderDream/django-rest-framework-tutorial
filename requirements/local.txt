@@ -8,6 +8,6 @@ djangorestframework==2.3.13
 #pyyaml==3.11
 coverage==3.6
 mock==1.0.1
-pygments>=1.0.0
+pygments>=1.0.0 # 用于代码高亮
 
 # pip install -r requirements/local.txt
