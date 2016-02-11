@@ -2,8 +2,13 @@
 Django-Rest-Framework 教程
 
 
+----------
+## version 4.0 ##
+
+3. 使用 class based views
 
 
+[http://www.weiguda.com/blog/21/](http://www.weiguda.com/blog/21/)
 
 ----------
 ## version 3.0 ##
