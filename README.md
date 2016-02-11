@@ -3,6 +3,42 @@ Django-Rest-Framework 教程
 
 
 
+
+
+----------
+## version 3.0 ##
+Django-Rest-Framework 教程: 2. Requests 和 Responses
+[http://www.weiguda.com/blog/20/](http://www.weiguda.com/blog/20/)
+
+
+curl -H 'Accept: application/json; indent=4' -u xulin:1234 http://127.0.0.1:8000/snippets/
+
+
+![](https://raw.githubusercontent.com/CoderDream/django-rest-framework-tutorial/master/docs/snapshot/v3.0/v030001.jpg)
+
+
+使用Accept头部信息控制response返回格式:
+
+    curl -u xulin:1234 http://127.0.0.1:8000/snippets/ -H 'Accept: application/json'  # JSON
+    curl -u xulin:1234 http://127.0.0.1:8000/snippets/ -H 'Accept: text/html'         # HTML
+或者使用后缀控制返回格式:
+
+    curl -u xulin:1234 http://127.0.0.1:8000/snippets/.json  # JSON suffix
+    curl -u xulin:1234 http://127.0.0.1:8000/snippets/.api   # Browsable API suffix
+通过修改request的Content-Type头部, 控制格式:
+
+    # 使用form data POST
+    curl -X POST -u xulin:1234 http://127.0.0.1:8000/snippets/ -d "code=print 123"
+
+    {"id": 3, "title": "", "code": "print 123", "linenos": false, "language": "python", "style": "friendly"}
+
+    # 使用JSON POST
+    curl -X POST -u xulin:1234 http://127.0.0.1:8000/snippets/ -d '{"code": "print 456"}' -H "Content-Type: application/json"
+
+    {"id": 4, "title": "", "code": "print 456", "linenos": true, "language": "python", "style": "friendly"}
+
+
+
 ----------
 ## version 2.0 ##
 
