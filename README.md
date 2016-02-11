@@ -22,7 +22,7 @@ Django-Rest-Framework 教程
 
 4, 然后运行安装命令：
 
-> pip install -r requirements/prod.txt
+> pip install -r requirements/local.txt
 
 5, 在eclipse中设置环境
 	![](https://raw.githubusercontent.com/CoderDream/django-rest-framework-tutorial/master/docs/snapshot/v1.0/v010007.png)
