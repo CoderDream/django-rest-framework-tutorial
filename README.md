@@ -3,19 +3,6 @@ Django-Rest-Framework 教程
 
 
 
-
-----------
-
-
-
-
-
-----------
-
-
-
-
-
 ----------
 ## version 1.0 ##
 
@@ -23,25 +10,25 @@ Django-Rest-Framework 教程
 
 环境准备
 
-1. 先安装virtualenv
+1, 先安装virtualenv
 	
 > pip install virtualenv
 
-2. 在需要安装虚拟环境的工程目录下设置env环境
+2, 在需要安装虚拟环境的工程目录下设置env环境
 > virtualenv env
 
-3. 激活env环境
+3, 激活env环境
 > env\scripts\activate
 
-4. 然后运行安装命令：
+4, 然后运行安装命令：
 
 > pip install -r requirements/prod.txt
 
-5. 在eclipse中设置环境
+5, 在eclipse中设置环境
 	![](https://raw.githubusercontent.com/CoderDream/django-rest-framework-tutorial/master/docs/snapshot/v1.0/v010007.png)
 
 
-6. 在项目中设置环境
+6, 在项目中设置环境
 	![](https://raw.githubusercontent.com/CoderDream/django-rest-framework-tutorial/master/docs/snapshot/v1.0/v010008.png)
 
 
