@@ -9,6 +9,11 @@ Django-Rest-Framework 教程
 Django-Rest-Framework 教程: 1. 序列化 (Serialization)
 
 
+
+
+![](https://raw.githubusercontent.com/CoderDream/django-rest-framework-tutorial/master/docs/snapshot/v2.0/v020001.jpg)
+
+
 ----------
 ## version 1.0 ##
 
