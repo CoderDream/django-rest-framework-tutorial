@@ -2,6 +2,18 @@
 Django-Rest-Framework 教程
 
 
+
+
+----------
+## version 6.0 ##
+
+Django-Rest-Framework 教程: 5. 提高关联性和超链接API
+
+
+![](https://raw.githubusercontent.com/CoderDream/django-rest-framework-tutorial/master/docs/snapshot/v6.0/v060001.png)
+
+
+
 ----------
 ## version 5.0 ##
 Django-Rest-Framework 教程: 4. 验证和权限

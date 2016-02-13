@@ -19,6 +19,7 @@ class SnippetSerializer(serializers.Serializer):
     style = serializers.ChoiceField(choices=STYLE_CHOICES,
                                     default='friendly')
     owner = serializers.Field(source='owner.username')
+    highlight = serializers.HyperlinkedIdentityField(view_name='snippet-highlight', format='html')
  
     def restore_object(self, attrs, instance=None):
         """
@@ -41,7 +42,10 @@ class SnippetSerializer(serializers.Serializer):
     class Meta:
         model = Snippet
 #         fields = ('id', 'title', 'code', 'linenos', 'language', 'style')
-        fields = ('id', 'title', 'code', 'linenos', 'language', 'style', 'owner')
+#         fields = ('id', 'title', 'code', 'linenos', 'language', 'style', 'owner')
+        fields = ('url', 'highlight', 'owner',
+                      'title', 'code', 'linenos', 'language', 'style')
+
 
 # class SnippetSerializer(serializers.ModelSerializer):
 #     owner = serializers.Field(source='owner.username')
@@ -52,7 +56,8 @@ class SnippetSerializer(serializers.Serializer):
         
 
 class UserSerializer(serializers.ModelSerializer):
-    snippets = serializers.PrimaryKeyRelatedField(many=True)
+#     snippets = serializers.PrimaryKeyRelatedField(many=True)
+    snippets = serializers.HyperlinkedRelatedField(many=True, view_name='snippet-detail')
 
     class Meta:
         model = User
