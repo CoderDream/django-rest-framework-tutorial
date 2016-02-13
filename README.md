@@ -3,12 +3,22 @@ Django-Rest-Framework 教程
 
 
 ----------
+## version 5.0 ##
+Django-Rest-Framework 教程: 4. 验证和权限
+
+[http://www.weiguda.com/blog/22/](http://www.weiguda.com/blog/22/)
+
+curl -X POST http://127.0.0.1:8000/snippets/ -d "code=print 789" -u xulin:1234
+
+![](https://raw.githubusercontent.com/CoderDream/django-rest-framework-tutorial/master/docs/snapshot/v5.0/v050001.png)
+
+----------
 ## version 4.0 ##
-
-3. 使用 class based views
-
+Django-Rest-Framework 教程: 3. 使用 class based views
 
 [http://www.weiguda.com/blog/21/](http://www.weiguda.com/blog/21/)
+
+
 
 ----------
 ## version 3.0 ##
@@ -19,7 +29,7 @@ Django-Rest-Framework 教程: 2. Requests 和 Responses
 curl -H 'Accept: application/json; indent=4' -u xulin:1234 http://127.0.0.1:8000/snippets/
 
 
-![](https://raw.githubusercontent.com/CoderDream/django-rest-framework-tutorial/master/docs/snapshot/v3.0/v030001.jpg)
+![](https://raw.githubusercontent.com/CoderDream/django-rest-framework-tutorial/master/docs/snapshot/v3.0/v030001.png)
 
 
 使用Accept头部信息控制response返回格式:

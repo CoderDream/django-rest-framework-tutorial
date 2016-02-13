@@ -1,6 +1,7 @@
 # coding=utf-8
 # snippets/serializers.py
 from django.forms import widgets
+from django.contrib.auth.models import User
 from rest_framework import serializers
 from snippets.models import Snippet, LANGUAGE_CHOICES, STYLE_CHOICES
 
@@ -17,11 +18,12 @@ class SnippetSerializer(serializers.Serializer):
                                        default='python')
     style = serializers.ChoiceField(choices=STYLE_CHOICES,
                                     default='friendly')
-
+    owner = serializers.Field(source='owner.username')
+ 
     def restore_object(self, attrs, instance=None):
         """
         创建或更新一个snippet实例, 返回该snippet实例
-
+ 
         如果不定义该function, 则反序列化时将返回一个包括所有field的dict
         """
         if instance:
@@ -32,10 +34,26 @@ class SnippetSerializer(serializers.Serializer):
             instance.language = attrs.get('language', instance.language)
             instance.style = attrs.get('style', instance.style)
             return instance
-
+ 
         # Create new instance
         return Snippet(**attrs)
-    
+     
     class Meta:
         model = Snippet
-        fields = ('id', 'title', 'code', 'linenos', 'language', 'style')
+#         fields = ('id', 'title', 'code', 'linenos', 'language', 'style')
+        fields = ('id', 'title', 'code', 'linenos', 'language', 'style', 'owner')
+
+# class SnippetSerializer(serializers.ModelSerializer):
+#     owner = serializers.Field(source='owner.username')
+# 
+#     class Meta:
+#         model = Snippet
+#         fields = ('id', 'title', 'code', 'linenos', 'language', 'style', 'owner')
+        
+
+class UserSerializer(serializers.ModelSerializer):
+    snippets = serializers.PrimaryKeyRelatedField(many=True)
+
+    class Meta:
+        model = User
+        fields = ('id', 'username', 'snippets')
