@@ -3,6 +3,20 @@ Django-Rest-Framework 教程
 
 
 
+----------
+## version 7.0 ##
+
+Django-Rest-Framework 教程: 6. ViewSets 和 Routers
+
+[http://www.weiguda.com/blog/24/](http://www.weiguda.com/blog/24/)
+
+
+参考：
+
+[https://github.com/CoderDream/rest-framework-tutorial](https://github.com/CoderDream/rest-framework-tutorial)
+
+
+
 
 ----------
 ## version 6.0 ##
@@ -81,6 +95,8 @@ Django-Rest-Framework 教程: 1. 序列化 (Serialization)
 ## version 1.0 ##
 
 Django-Rest-Framework 教程: 快速入门
+
+[http://www.weiguda.com/blog/18/](http://www.weiguda.com/blog/18/)
 
 环境准备
 

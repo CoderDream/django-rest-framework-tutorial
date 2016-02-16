@@ -39,3 +39,8 @@ class Snippet(models.Model):
                                   full=True, **options)
         self.highlighted = highlight(self.code, lexer, formatter)
         super(Snippet, self).save(*args, **kwargs)
+
+        # limit the number of instances retained
+        snippets = Snippet.objects.all()
+        if len(snippets) > 100:
+            snippets[0].delete()

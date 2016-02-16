@@ -1,40 +1,16 @@
-# from django.conf.urls import patterns, include, url
-#
-# from django.contrib import admin
-# admin.autodiscover()
-#
-# urlpatterns = patterns('',
-#     # Examples:
-#     # url(r'^$', 'tutorial.views.home', name='home'),
-#     # url(r'^blog/', include('blog.urls')),
-#
-#     url(r'^admin/', include(admin.site.urls)),
-#     url(r'^', include('snippets.urls')),
-# )
-
-from django.contrib import admin
-admin.autodiscover()
-
-
-from rest_framework import routers
+# coding=utf-8
 from django.conf.urls import patterns, url, include
-from quickstart import views
-router = routers.DefaultRouter()
+from snippets import views
+from rest_framework.routers import DefaultRouter
+
+# 创建router并注册viewset.
+router = DefaultRouter()
+router.register(r'snippets', views.SnippetViewSet)
 router.register(r'users', views.UserViewSet)
-router.register(r'groups', views.GroupViewSet)
 
-# Wire up our API using automatic URL routing.
-# Additionally, we include login URLs for the browseable API.
+# router会自动生成url
+# 我们只需要额外提供可浏览性登入API
 urlpatterns = patterns('',
-                       url(r'^', include(router.urls)),
-                       url(r'^admin/', include(admin.site.urls)),
-                       url(r'^api-auth/',
-                           include('rest_framework.urls', namespace='rest_framework')),
-                       url(r'^', include('snippets.urls')),
-
-                       )
-
-urlpatterns += patterns('',
-                        url(r'^api-auth/', include('rest_framework.urls',
-                                                   namespace='rest_framework')),
-                        )
+    url(r'^', include(router.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+)
