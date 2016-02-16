@@ -152,3 +152,38 @@ Django-Rest-Framework 教程: 快速入门
 	![](https://raw.githubusercontent.com/CoderDream/django-rest-framework-tutorial/master/docs/snapshot/v1.0/v010006.jpg)
 
 
+----------
+Django初始化数据库
+
+
+initial_data.json
+
+1. 导出数据到json：
+	dumpdata app > data.json
+
+2. 初始数据：
+	将json数据放到app\fixtures\文件夹下
+
+----------
+
+Windows下安装mysql-python(MySQLdb)诺干问题及解决方
+
+http://cyfloel0516.sinaapp.com/?p=193
+
+解决办法：最最最无耻的解决办法，由于在Virtualenv下安装包确实会出现各种古里古怪的问题，因此，只有一个最终的绝招了。拿Mysql-python为例。Mysql-python的制作者估计知道windows下安装有多么的困难，因此，在Windows下有提供exe安装包，下载地址。下载完成后，安装。由于这个安装包只读取注册表下的Python安装目录，因此，安装目标是我们本机的Python环境，而不是Virtualenv的安装环境，怎么解决呢？其实很简单，安装完毕后，找到本机的Python安装目录下的包目录，以我本机为例：C:\Python27\Lib\site-packages。在这个目录下找到Mysql相关的文件及文件夹，一共有6个：
+
+MySQL_python-1.2.3-py2.7.egg-info(文件夹)
+MySQLdb(文件夹)
+_mysql.pyd
+_mysql_exceptions.py
+_mysql_exceptions.pyc
+_mysql_exceptions.pyo
+将这些文件及文件夹复制到Virtualenv所创建的沙盒的Lib\site-packages文件夹下即可。这种方法在目前的使用中，我还没发现有什么问题。
+
+
+
+
+----------
+
+
+
